@@ -19,16 +19,17 @@
    ============================================================ */
 :root{
   /* ---- Colors ---- */
-  --ink:      #0B0F1A;   /* page background */
-  --ink-2:    #0E1424;   /* soft background glow */
-  --panel:    #121A2C;   /* cards / raised surfaces */
-  --panel-2:  #162034;   /* card hover */
-  --line:     #253350;   /* borders / dividers */
-  --text:     #E9EEF7;   /* primary text */
-  --muted:    #91A2C1;   /* secondary text */
-  --accent:   #3FE0C5;   /* primary accent (teal) */
-  --accent-2: #5B9BFF;   /* secondary accent (blue) */
-  --signal:   #F5B043;   /* attention accent (amber) — used sparingly */
+  --ink:      #4F4F4F;   /* page background (neutral grey) */
+  --ink-2:    #494949;   /* soft background glow */
+  --panel:    #585858;   /* cards / raised surfaces */
+  --panel-2:  #616161;   /* card hover */
+  --line:     #6B6B6B;   /* borders / dividers */
+  --text:     #F4F3EF;   /* primary text */
+  --muted:    #C7C6C2;   /* secondary text */
+  --accent:   #F2B455;   /* gold */
+  --accent-2: #E8895A;   /* warm amber */
+  --signal:   #F2B455;   /* attention accent */
+  --on-accent:#241A06;   /* dark text that sits on gold */
  
   /* ---- Fonts ---- */
   --font-display: 'Bricolage Grotesque', sans-serif;
@@ -54,14 +55,14 @@ body{
   overflow-x:hidden;
   /* faint blueprint dot-grid + ambient glow, all CSS, no images */
   background-image:
-    radial-gradient(900px 500px at 78% -8%, rgba(91,155,255,.10), transparent 60%),
-    radial-gradient(700px 500px at 0% 8%, rgba(63,224,197,.08), transparent 55%),
+    radial-gradient(900px 500px at 78% -8%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent 60%),
+    radial-gradient(700px 500px at 0% 8%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 55%),
     radial-gradient(circle at 1px 1px, rgba(255,255,255,.045) 1px, transparent 0);
   background-size: auto, auto, 26px 26px;
   background-attachment: fixed, fixed, fixed;
 }
 a{ color:inherit; text-decoration:none; }
-::selection{ background:var(--accent); color:var(--ink); }
+::selection{ background:var(--accent); color:var(--on-accent); }
  
 .wrap{ max-width:var(--max); margin:0 auto; padding-inline:var(--pad); }
  
@@ -79,7 +80,7 @@ a{ color:inherit; text-decoration:none; }
 .nav{
   position:sticky; top:0; z-index:50;
   backdrop-filter:blur(10px);
-  background:rgba(11,15,26,.72);
+  background:rgba(70,70,70,.75);
   border-bottom:1px solid var(--line);
 }
 .nav-inner{
@@ -160,7 +161,7 @@ a{ color:inherit; text-decoration:none; }
 .btn:hover{ transform:translateY(-2px); border-color:var(--accent); }
 .btn.primary{
   background:linear-gradient(105deg, var(--accent), var(--accent-2));
-  color:var(--ink); border-color:transparent; font-weight:600;
+  color:var(--on-accent); border-color:transparent; font-weight:600;
 }
 .btn.primary:hover{ filter:brightness(1.06); }
  
@@ -226,8 +227,8 @@ section[id]{ scroll-margin-top:80px; }
 .card h3{ font-family:var(--font-display); font-weight:700; font-size:1.45rem; letter-spacing:-.01em; }
 .tag-wip{
   font-family:var(--font-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--signal); border:1px solid color-mix(in srgb, var(--signal) 45%, transparent);
-  background:color-mix(in srgb, var(--signal) 12%, transparent);
+  color:var(--muted); border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
   padding:5px 10px; border-radius:20px; white-space:nowrap;
 }
 .card .flow{
