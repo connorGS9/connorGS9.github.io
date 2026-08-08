@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Connor Smith — Software Engineer</title>
-<meta name="description" content="Connor Smith — backend / full-stack software engineer. I build systems that move data from raw to useful: job aggregation, video streaming, and market simulation." />
+<title>Connor Smith · Software Engineer</title>
+<meta name="description" content="Connor Smith · backend / full-stack software engineer. I build systems that move data from raw to useful: job aggregation, video streaming, and market simulation." />
  
 <!-- Inline SVG favicon (no external file needed) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0F1A'/%3E%3Ccircle cx='9' cy='16' r='3' fill='%233FE0C5'/%3E%3Cpath d='M12 16h8' stroke='%235B9BFF' stroke-width='2'/%3E%3Ccircle cx='23' cy='16' r='3' fill='%235B9BFF'/%3E%3C/svg%3E" />
@@ -286,11 +286,12 @@ footer a:hover{ color:var(--accent); }
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top" aria-label="Connor Smith — home">
+    <a class="brand" href="#top" aria-label="Connor Smith · home">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="none"/><circle cx="9" cy="16" r="3" fill="var(--accent)"/><path d="M12 16h8" stroke="var(--accent-2)" stroke-width="2"/><circle cx="23" cy="16" r="3" fill="var(--accent-2)"/></svg>
       connor smith
     </a>
     <div class="nav-links">
+      <a href="#currently">currently</a>
       <a href="#work">work</a>
       <a href="#stack">stack</a>
       <a href="#contact">contact</a>
@@ -302,8 +303,8 @@ footer a:hover{ color:var(--accent); }
 <header class="hero wrap" id="top">
   <span class="eyebrow">Software Engineer · Backend / Full-Stack</span>
   <h1>Connor<br><span class="grad">Smith</span></h1>
-  <p class="role">// builds backend systems that don't fall over under load</p>
-  <p class="thesis">I build the machinery that moves data from <b>raw to useful</b> — aggregating job feeds, streaming video, and replaying markets — with an eye for clean APIs and systems that scale.</p>
+  <p class="role">// backend systems that hold up in production</p>
+  <p class="thesis">I build backends that turn raw data into something useful: aggregating job feeds, streaming video, and replaying market history. Clean APIs, sensible architecture, no surprises when traffic shows up.</p>
  
   <div class="pipe" aria-hidden="true">
     <span class="node">ingest</span>
@@ -335,7 +336,7 @@ footer a:hover{ color:var(--accent); }
     <div class="block-head"><span class="eyebrow">// about</span><h2>What I work on</h2></div>
     <div class="about-grid">
       <div>
-        <p>I'm a software engineer who gravitates toward the <b>backend</b> — the part where data gets ingested, transformed, and served without breaking. That's meant a job-aggregation platform with <b>vector-based matching</b>, a video service that transcodes and segments uploads for smooth streaming, and a C++ engine for backtesting trading strategies.</p>
+        <p>I'm a software engineer who gravitates toward the <b>backend</b> where data gets ingested, transformed, and served without breaking. That's meant a job-aggregation platform with <b>vector-based matching</b>, a video service that transcodes and segments uploads for smooth streaming, and a C++ engine for backtesting trading strategies.</p>
         <br>
         <p>I care about systems that are correct first and fast second, and I like the whole path from a raw data source to something a person can actually use.</p>
       </div>
@@ -345,6 +346,24 @@ footer a:hover{ color:var(--accent); }
         <div class="fact"><span class="k">data</span><span class="v">PostgreSQL · vector search</span></div>
         <div class="fact"><span class="k">status</span><span class="v">Open to SWE roles</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+ <!-- CURRENTLY -->
+<section class="block" id="currently">
+  <div class="wrap reveal">
+    <div class="block-head"><span class="eyebrow">// currently</span><h2>Where I'm working</h2></div>
+    <div class="work">
+      <article class="card">
+        <div class="card-top">
+          <h3>Software Engineering Intern · Numberz.ai</h3>
+          <span class="tag-wip">Current</span>
+        </div>
+        <div class="flow">produce <span>&rarr;</span> evaluate <span>&rarr;</span> alert</div>
+        <p>Building a Kafka-based weather alert system that streams events at 100/sec through a JSON-driven rule engine, fronted by a React dashboard with severity filtering. Added role-based access control and audit logging built to the NIST 800-53 standard.</p>
+        <div class="card-tech"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>React</span><span>Vite</span></div>
+      </article>
     </div>
   </div>
 </section>
@@ -391,10 +410,9 @@ footer a:hover{ color:var(--accent); }
       <article class="card">
         <div class="card-top"><h3>Pursuitly</h3></div>
         <div class="flow">apis <span>&rarr;</span> match <span>&rarr;</span> dashboard</div>
-        <p>A job-hunting platform that pulls fresh listings daily from multiple job APIs, matches them to each user, and serves a personalized dashboard — plus an AI cover-letter writer. Users, jobs, and their vector embeddings all live in PostgreSQL for semantic matching.</p>
+        <p>A job-hunting platform that pulls fresh listings daily from multiple job APIs, matches them to each user, and serves a personalized dashboard, with a built-in AI cover-letter writer. Users, jobs, and their vector embeddings all live in PostgreSQL for semantic matching.</p>
         <div class="card-tech"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Vector Embeddings</span></div>
         <div class="card-links">
-          <!-- Replace href with your actual Pursuitly repo URL -->
           <a href="https://github.com/connorGS9/pursuitly" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.23-3.37-1.23-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.36 1.11 2.94.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.05 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
             View repo
@@ -440,7 +458,7 @@ footer a:hover{ color:var(--accent); }
 <section class="block contact" id="contact">
   <div class="wrap reveal">
     <span class="eyebrow">// contact</span>
-    <h2>Let's build something.</h2>
+    <h2>Say hello ദ്ദി◝ ⩊ ◜.ᐟ</h2>
     <p>I'm open to software engineering roles and always happy to talk shop. The fastest way to reach me is email.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:connorgsmith2020@gmail.com">
@@ -449,6 +467,10 @@ footer a:hover{ color:var(--accent); }
       </a>
       <a class="btn" href="https://www.linkedin.com/in/connor-smith-6857b22b5/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/connorGS9" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg>
+        Resume
+     </a>
     </div>
   </div>
 </section>
